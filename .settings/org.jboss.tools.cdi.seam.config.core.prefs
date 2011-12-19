@@ -1,0 +1,10 @@
+#Mon Dec 19 17:47:47 GMT 2011
+eclipse.preferences.version=1
+org.jboss.tools.cdi.seam.config.core.validator.problem.abstractTypeIsConfiguredAsBean=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.annotationExpected=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.beanConstructorIsMissing=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.inlineBeanTypeMismatch=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.unresolvedConstructor=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.unresolvedMember=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.unresolvedMethod=warning
+org.jboss.tools.cdi.seam.config.core.validator.problem.unresolvedType=warning

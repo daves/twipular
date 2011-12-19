@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Twipular</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	<script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
+</h:head>
+
+<h:body>
+	<div class="container">
+
+		<div class="page-header">
+			<h1>
+				Twipular <small>Popular Twitter Clients</small>
+			</h1>
+		</div>
+
+		<script>
+		$(document).ready(function() 
+			    { 
+			        $("#clientTable").tablesorter(); 
+			    } 
+			); 
+</script>
+		<div class="row">
+			<div class="span11">
+				<h:dataTable id="clientTable" selectionMode="single"
+					value="#{twitterBean.twitterClients}" var="client"
+					styleClass="zebra-striped">
+					<h:column id="name" sortable="true">
+						<f:facet name="header">
+							<h:outputText value="Name" />
+						</f:facet>
+						<h:outputText value="#{client.name}" escape="false" />
+					</h:column>
+					<h:column id="id" sortable="true">
+						<f:facet name="header">
+							<h:outputText value="Count" />
+						</f:facet>
+						<h:outputText value="#{client.count}" escape="false" />
+					</h:column>
+				</h:dataTable>
+			</div>
+			<div class="span5">
+				<h3>Last Updated</h3><p><h:outputText value="#{twitterBean.lastUpdated}" /></p>
+				<h:form><h:commandButton value="Refresh" action="#{twitterBean.refresh}" /> </h:form>
+			</div>
+		</div>
+	</div>
+</h:body>
+
+</html>
